@@ -1,4 +1,7 @@
 <a href="/play">Ok</a>
-<%= @game.player1.name %> attacked <%= @game.player2.name %>
 
-
+<% if @game.turn_pl1 == false %>
+  <%= @game.player1.name %> attacked <%= @game.player2.name %>
+<% else %>
+  <%= @game.player2.name %> attacked <%= @game.player1.name %>
+<% end %>
